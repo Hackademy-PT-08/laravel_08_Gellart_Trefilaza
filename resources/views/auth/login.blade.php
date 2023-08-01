@@ -23,20 +23,16 @@
     <div class="container w-50 p-3">
         <div class="row">
             <div class="col-12">
-                <form action="{{ route('articles.store') }}" method="post" enctype="multipart/form-data">
+                <form action="/login" method="post">
                     @csrf
                     <div class="mb-3">
-                        <label for="title" class="form-label text-white">Title</label>
-                        <input type="text" name="title" class="form-control" id="title"
+                        <label for="email" class="form-label text-white">email</label>
+                        <input type="email" name="email" class="form-control" id="email"
                             aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label for="text" class="form-label text-white">Content</label>
-                        <textarea name="content" id="content" class="form-control" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="file" class="form-label text-white">Image</label>
-                        <input type="file" name="image" class="form-control" id="image"
+                        <label for="text" class="form-label text-white">password</label>
+                        <input type="password" name="password" class="form-control" id="password"
                             aria-describedby="emailHelp">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

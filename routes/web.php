@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/articles/add', [ArticlesController::class, 'create'])->name('articles.create');
 Route::post('/articles/add', [ArticlesController::class, 'store'])->name('articles.store');
+
+
+Route::get('/profile', [UserController::class, 'index'])->name('user.profile')->middleware(['auth', 'verified']);
+
+
+
